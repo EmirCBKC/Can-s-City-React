@@ -1,38 +1,620 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Chakra+Petch&family=Kanit:wght@300&family=Pacifico&family=Playfair+Display:wght@600&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Chakra Petch', sans-serif;
+  list-style: none;
+}
+
+body {
+  background-color: black !important;
+}
+
+/******************************************* NAVBAR-CSS-START ***********************************************/
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
+
+nav {
+  width: 100%;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  border-bottom: 5px solid #00ffff;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.navbar-toggler-icon {
+  background-color: #00ffff;
+  border-radius: 5px;
+}
+
+.navbar-brand {
+  color: aqua !important;
+  text-shadow: 2px 2px 2px aqua;
+  font-size: 40px !important;
+}
+
+.navbar-brand:hover {
+  animation: NavClick 2s infinite;
+}
+
+.navbar-collapse {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-link {
+  font-size: 18px !important;
+  color: #00ffff !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link:hover {
+  color: #00ffff !important;
+  animation: NavClick 2s infinite !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown-menu {
+  background-color: black !important;
+  border: 2px solid #00ffff !important;
+}
+
+.dropdown-item {
+  color: #00ffff !important;
+}
+
+.dropdown-item:hover {
+  color: black !important;
+  background-color: #00ffff !important;
+}
+
+.basket-content {
+  display: none;
+  width: 35rem;
+  height: 0rem;
+  background-color: #000000e3;
+  border: 2px solid #00ffff;
+  border-radius: 0px 0px 30px 30px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 999;
+  animation: BasketOpenAni 5s forwards;
+  overflow: auto;
+}
+
+.basket-game {
+  opacity: 0;
+  width: 90%;
+  height: 10rem;
+  background-color: #00ffff;
+  border-radius: 15px;
+  border: 2px solid black;
+  animation: BasketGameAni 9s forwards;
+}
+
+.basket-left {
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.basket-right h3,
+.basket-right h4 {
+  font-size: 23px;
+}
+
+.order-button {
+  width: 100%;
+  height: 5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.order-button a {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.user-login-content {
+  display: none;
+  width: 35rem;
+  height: 0rem;
+  opacity: 0;
+  background-color: black;
+  border: 2px solid #00ffff;
+  border-radius: 0px 0px 30px 30px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 999;
+  animation: UserOpenAni 5s forwards;
+}
+
+form {
+  width: 70%;
+}
+
+.username,
+.password,
+.remember {
+  width: 100%;
+}
+
+.username label,
+.password label {
+  font-size: 35px;
+  color: #00ffff;
+}
+
+.username input,
+.password input {
+  background-color: #000f1e;
+  border-color: #00ffff;
+  height: 90%;
+  color: #00ffff;
+  border-radius: 5px;
+}
+
+.username input::placeholder,
+.password input::placeholder {
+  color: #007171 !important;
+}
+
+.remember label {
+  font-size: 18px;
+  color: #00aeae;
+}
+
+.form-buttons button {
+  background-color: #000000;
+  border-color: #00ffff;
+  color: #00ffff;
+  width: 40%;
+  height: 3rem;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.form-buttons button:hover {
+  background-color: #00ffff;
+  border-color: #000000;
+  color: black;
+}
+
+.form-buttons a {
+  background-color: #000000;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  width: 40%;
+  font-size: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.form-buttons a:hover {
+  background-color: #00ffff;
+  border-color: #000000;
+  color: black;
+}
+
+.form {
+  width: 70%;
+}
+
+.basket-icon:hover {
+  animation: Logo 3s infinite;
+}
+
+.user-icon:hover {
+  animation: Logo 3s infinite;
+}
+
+
+
+/******************************************* NAVBAR-CSS-END ***********************************************/
+
+/******************************************* HOME-CSS-START ***********************************************/
+
+.home-background {
+  background-image: linear-gradient(to top, #000000 10%, #343434d3 34%, #4b452c 37%, #fbcd00 49%, #600d00 60%, #000000 90%);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.home-content {
+  width: 100%;
+  height: auto;
+}
+
+.carousel {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  animation: CarouselAni 3s infinite;
+}
+
+.carousel-indicators {
+  display: none !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none !important;
+}
+
+.home-pc {
+  width: 100%;
+  height: 100%;
+}
+
+.home-ps5 {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.home-ps5 img {
+  background-position: bottom;
+}
+
+.home-xbox {
+  width: 100%;
+  height: 100%;
+}
+
+.home-pc-text {
+  width: 100%;
+  background-color: rgba(161, 0, 0, 0.666);
+  border-radius: 40px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.home-pc-text button {
+  width: 100%;
+  font-size: 25px;
+  background-color: rgb(32, 0, 0);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.home-pc-text button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(150, 2, 2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home-ps5-text {
+  width: 100%;
+  background-color: rgba(255, 247, 0, 0.759);
+  border-radius: 40px;
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.home-ps5-text button {
+  width: 100%;
+  font-size: 25px;
+  background-color: rgb(51, 45, 0);
+  color: white;
+}
+
+.home-ps5-text button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 225, 0);
+}
+
+.home-xbox-text {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 40px;
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.home-xbox-text button {
+  width: 100%;
+  font-size: 25px;
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+.home-xbox-text button:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.faq {
+  font-size: 70px;
+  color: #00ffff;
+}
+
+.accordion {
+  width: 50%;
+  animation: AccordionAni 3s infinite;
+}
+
+.accordion-item {
+  background-color: #00ffff !important;
+  border: 2px solid #00ffff !important;
+  color: black !important;
+  font-size: 20px !important;
+}
+
+.accordion-button {
+  background-image: linear-gradient(43deg, #010712 0%, #04132fe4 66%, #305aa896 100%) !important;
+  color: #00ffff !important;
+  font-size: 25px !important;
+}
+
+/******************************************* HOME-CSS-END ***********************************************/
+
+/******************************************* ABOUT-CSS-START ***********************************************/
+
+.about-us-background {
+  width: 100%;
+  height: auto;
+}
+
+.header-us {
+  border-radius: 0px 0px 30px 30px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #3b4fbb, #465edf);
+  box-shadow: 20px 20px 60px #374bb1,
+    -20px -20px 60px #4b65ef;
+}
+
+.about-us-content {
+  width: 100%;
+  height: auto;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+}
+
+.about-us-row {
+  width: 100%;
+  height: auto;
+}
+
+.about-left-png img {
+  width: 70%;
+  height: 100%;
+  filter: drop-shadow(5px 5px 40px #00ffff48);
+}
+
+.info-us {
+  color: #00ffff;
+}
+
+.about-right-png img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(5px 5px 40px #00ffff48);
+}
+
+
+
+/******************************************* ABOUT-CSS-END ***********************************************/
+
+/******************************************* FOOTER-CSS-START ***********************************************/
+footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(43deg, #010712 0%, #04132fe4 46%, #305aa896 100%);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  animation: FooterAni 3s infinite;
+}
+
+footer li a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #00ffff;
+  text-shadow: 1px 1px 1px aqua;
+}
+
+footer li a:hover {
+  animation: NavClick 2s infinite;
+}
+
+footer h2 {
+  color: #00ffff;
+}
+
+.footer-down h6 {
+  color: #00ffff;
+}
+
+/******************************************* FOOTER-CSS-END ***********************************************/
+
+/******************************************* Animation-Start ****************************************************/
+
+@keyframes Logo {
+  0% {
+    filter: drop-shadow(0px 0px 0px #00ffff);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    filter: drop-shadow(0px 0px 5px #00ffff);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 0px #00ffff);
   }
 }
+
+@keyframes BasketGameAni {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes BasketOpenAni {
+  0% {
+    height: 0rem;
+  }
+
+  50% {
+    height: 35rem;
+  }
+
+  100% {
+    height: 35rem;
+  }
+}
+
+@keyframes UserOpenAni {
+  0% {
+    height: 0rem;
+    opacity: 0;
+  }
+
+  50% {
+    height: 17rem;
+    opacity: 1;
+  }
+
+  100% {
+    height: 17rem;
+    opacity: 1;
+  }
+}
+
+@keyframes AccordionAni {
+  0% {
+    box-shadow: rgba(0, 255, 255, 0.3) 0px 5px, rgba(0, 255, 255, 0.2) 0px 10px, rgba(0, 255, 255, 0.1) 0px 15px, rgba(0, 255, 255, 0.07) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
+  }
+
+  50% {
+    box-shadow: rgba(0, 255, 255, 0.5) 0px 15px, rgba(0, 255, 255, 0.4) 0px 20px, rgba(0, 255, 255, 0.3) 0px 25px, rgba(0, 255, 255, 0.2) 0px 30px, rgba(0, 255, 255, 0.1) 0px 35px;
+  }
+
+  100% {
+    box-shadow: rgba(0, 255, 255, 0.3) 0px 5px, rgba(0, 255, 255, 0.2) 0px 10px, rgba(0, 255, 255, 0.1) 0px 15px, rgba(0, 255, 255, 0.07) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
+  }
+}
+
+@keyframes CarouselAni {
+  0% {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px, rgba(0, 0, 0, 0.2) 0px 10px, rgba(0, 0, 0, 0.1) 0px 15px, rgba(0, 0, 0, 0.07) 0px 20px, rgba(0, 0, 0, 0.05) 0px 25px;
+  }
+
+  50% {
+    box-shadow: rgba(0, 0, 0, 0.793) 0px 15px, rgba(0, 0, 0, 0.548) 0px 20px, rgba(0, 0, 0, 0.514) 25px, rgba(0, 0, 0, 0.565) 0px 30px, rgba(0, 0, 0, 0.428) 0px 35px;
+  }
+
+  100% {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px, rgba(0, 0, 0, 0.2) 0px 10px, rgba(0, 0, 0, 0.1) 0px 15px, rgba(0, 0, 0, 0.07) 0px 20px, rgba(0, 0, 0, 0.05) 0px 25px;
+  }
+}
+
+@keyframes PC-PS5-XBOX-HeaderAni {
+  0% {
+    filter: saturate(0);
+  }
+
+  50% {
+    filter: saturate(2);
+  }
+
+  100% {
+    filter: saturate(0);
+  }
+}
+
+@keyframes BackgroundGameCard {
+  0% {
+    box-shadow: #00ffff00 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
+  50% {
+    box-shadow: #00ffff2b 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
+  100% {
+    box-shadow: #00ffff00 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+}
+
+@keyframes GameCard {
+  0% {
+    filter: saturate(1);
+    filter: drop-shadow(0px 0px 0px #00ffff00);
+  }
+
+  50% {
+    filter: saturate(2);
+    filter: drop-shadow(0px -10px 10px #00ffff);
+  }
+
+  100% {
+    filter: saturate(1);
+    filter: drop-shadow(0px 0px 0px #00ffff00);
+  }
+}
+
+@keyframes Brand {
+  0% {
+    background-color: #a8b6fb;
+  }
+
+  50% {
+    background-color: #101f6d;
+  }
+
+  100% {
+    background-color: #a8b6fb;
+  }
+}
+
+@keyframes NavClick {
+  0% {
+    text-shadow: 2px 2px 2px aqua;
+  }
+
+  50% {
+    text-shadow: 2px 2px 10px aqua;
+  }
+
+  100% {
+    text-shadow: 2px 2px 2px aqua;
+  }
+}
+
+@keyframes FooterAni {
+  0% {
+    box-shadow: rgba(0, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  50% {
+    box-shadow: rgba(0, 255, 255, 1) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.5) 0px 18px 36px -18px inset;
+  }
+
+  100% {
+    box-shadow: rgba(0, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(0, 255, 255, 0.3) 0px 18px 36px -18px inset;
+  }
+}
+
+/******************************************* Animation-End ****************************************************/
