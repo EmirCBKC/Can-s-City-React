@@ -26,7 +26,7 @@ function App() {
     <>
       <Router>
         <NavbarSite />
-        <Routes> {/* Switch yerine Routes kullanılır */}
+        <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -36,7 +36,6 @@ function App() {
           <Route path="/complete-order" element={<CompleteOrder />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/detail" element={<Detail />} />
-          {/* Diğer sayfalar için de buraya Route ekleyebilirsiniz */}
         </Routes>
         <Footer />
       </Router>

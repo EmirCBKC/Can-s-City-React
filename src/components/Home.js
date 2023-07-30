@@ -1,11 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Accordion from 'react-bootstrap/Accordion';
-import CarouselImage1 from './main-img/home/carousel-1.jpg';
-import CarouselImage2 from './main-img/home/carousel-2.jpg';
-import CarouselImage3 from './main-img/home/carousel-3.jpg';
-import Pc from './main-img/home/pc.png';
-import Ps5 from './main-img/home/ps5.png';
-import Xbox from './main-img/home/xbox.png';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -15,13 +11,13 @@ function Home() {
                 <div data-aos="fade-down">
                     <Carousel>
                         <Carousel.Item>
-                            <img src={CarouselImage1} className="d-block w-100"></img>
+                            <img src="/main-img/home/carousel-1.jpg" className="d-block w-100"></img>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img src={CarouselImage2} className="d-block w-100"></img>
+                            <img src="/main-img/home/carousel-2.jpg" className="d-block w-100"></img>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img src={CarouselImage3} className="d-block w-100"></img>
+                            <img src="/main-img/home/carousel-3.jpg" className="d-block w-100"></img>
                         </Carousel.Item>
                     </Carousel>
                 </div>
@@ -34,7 +30,7 @@ function Home() {
                             <div
                                 className="pc-col d-flex align-items-center col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div className="home-pc">
-                                    <img src={Pc} width="100%" height="100%"></img>
+                                    <img src="/main-img/home/pc.png" width="100%" height="100%"></img>
                                 </div>
                             </div>
 
@@ -48,7 +44,7 @@ function Home() {
                                         Possimus laborum assumenda neque soluta quia quisquam ipsam sit, consequatur doloribus
                                         temporibus tenetur quas totam laboriosam tempore dolorum quae reprehenderit veniam autem
                                         voluptatum. Voluptatibus rem sit fugiat sequi officia velit!</p>
-                                    <a href="/pc"><button className="btn">Go games</button></a>
+                                    <Link to="/pc"><button className="btn">Go games</button></Link>
                                 </div>
                             </div>
 
@@ -67,14 +63,14 @@ function Home() {
                                     Officiis assumenda repellat adipisci atque! Alias repellendus quasi delectus totam
                                     assumenda iure architecto labore tempora placeat pariatur ducimus molestiae eveniet, a
                                     velit! Est vero ea obcaecati ipsam ad placeat soluta?</p>
-                                <a href="/ps5"><button className="btn">Go games</button></a>
+                                <Link to="/ps5"><button className="btn">Go games</button></Link>
                             </div>
                         </div>
 
                         <div
                             className="ps5-col p-5 d-flex align-items-center col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="home-ps5">
-                                <img src={Ps5} width="100%" height="100%"></img>
+                                <img src="/main-img/home/ps5.png" width="100%" height="100%"></img>
                             </div>
                         </div>
 
@@ -86,7 +82,7 @@ function Home() {
                             <div
                                 className="xbox-col d-flex align-items-center col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div className="home-xbox">
-                                    <img src={Xbox} width="100%" height="100%"></img>
+                                    <img src="/main-img/home/xbox.png" width="100%" height="100%"></img>
                                 </div>
                             </div>
 
@@ -100,7 +96,7 @@ function Home() {
                                         Enim, officiis amet! Error ipsa hic ullam obcaecati perferendis quae omnis recusandae
                                         harum repudiandae voluptates exercitationem cum perspiciatis, consectetur deserunt porro
                                         quas velit nulla repellat modi similique architecto assumenda esse.</p>
-                                    <a href="/xbox"><button className="btn">Go games</button></a>
+                                        <Link to="/xbox"><button className="btn">Go games</button></Link>
                                 </div>
                             </div>
 

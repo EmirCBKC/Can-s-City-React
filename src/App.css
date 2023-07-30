@@ -68,6 +68,8 @@ nav {
   color: #00ffff !important;
 }
 
+.dropdown-item:focus,
+.dropdown-item.active,
 .dropdown-item:hover {
   color: black !important;
   background-color: #00ffff !important;
@@ -843,7 +845,7 @@ iframe {
 /******************************************* PROFILE-CSS-START ************************************************/
 
 .profile-background {
-  background-image: linear-gradient(to left, #0a244f36 20%, rgba(0, 25, 38, 0.878) 97%), url(./components/main-img/profile/background.png);
+  background-image: linear-gradient(to left, #0a244f36 20%, rgba(0, 25, 38, 0.878) 97%), url(./components/css-img/profile/background.png);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -878,7 +880,7 @@ iframe {
 /******************************************* COMPLETE-ORDER-CSS-START ************************************************/
 
 .complete-order-background {
-  background-image: linear-gradient(to top, #001231c4 20%, rgba(0, 25, 38, 0.878) 97%), url(./components/main-img/complete-order/background.jpg);
+  background-image: linear-gradient(to top, #001231c4 20%, rgba(0, 25, 38, 0.878) 97%), url(./components/css-img/complete-order/background.jpg);
   background-position: bottom;
   background-size: cover;
   width: 100%;
@@ -1005,7 +1007,7 @@ iframe {
 /******************************************* CONTACT-CSS-START ************************************************/
 
 .contact-us-background {
-  background-image: url(./components/main-img/contact/background.jpg);
+  background-image: url(./components/css-img/contact/background.jpg);
   background-position: bottom;
   background-size: cover;
   width: 100%;

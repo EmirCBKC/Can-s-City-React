@@ -1,19 +1,15 @@
-import Left from './main-img/about/left.png';
-import Right from './main-img/about/right.png';
-import Video from './main-videous/cans-city-about-us.mp4';
-
 function About() {
     return (
         <>
             <div className="about-us-background d-flex justify-content-center flex-column align-items-center">
                 <div className="about-us-content d-flex flex-column align-items-center">
                     <video className="header-us" width="100%" autoPlay muted loop>
-                        <source src={Video}></source>
+                        <source src="/main-videous/cans-city-about-us.mp4"></source>
                     </video>
 
                     <div className="about-us-row justify-content-center mt-5 p-5 row">
                         <div className="about-left-png d-flex justify-content-center mt-5 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <img src={Left} alt=""></img>
+                            <img src="/main-img/about/left.png" alt=""></img>
                         </div>
                         <div className="about-us-info d-flex justify-content-center mt-5 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div className="info-us">
@@ -26,7 +22,7 @@ function About() {
                             </div>
                         </div>
                         <div className="about-right-png d-flex justify-content-center mt-5 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <img src={Right} alt=""></img>
+                            <img src="/main-img/about/right.png" alt=""></img>
                         </div>
                     </div>
                 </div>
