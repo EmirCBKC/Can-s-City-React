@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <>
-            <footer className="d-flex justify-content-between align-items-center flex-column mt-5">
+            <footer className="d-flex justify-content-between align-items-center flex-column">
                 <div className="footer-up mt-5 p-2 row">
                     <div className="mt-5 mb-5 col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <h2 className="text-center"><ins>PC Games</ins></h2>

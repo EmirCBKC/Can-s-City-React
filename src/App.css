@@ -361,6 +361,600 @@ form {
 
 /******************************************* HOME-CSS-END ***********************************************/
 
+/******************************************* PC-PS5-XBOX-CSS-START *******************************/
+.header img {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  animation: PC-PS5-XBOX-HeaderAni 5s infinite;
+}
+
+.add-basket {
+  background-color: rgb(15, 22, 31);
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  width: 10rem;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.add-basket:hover {
+  background-color: rgb(118, 165, 226);
+  color: black;
+  border: 2px solid rgb(15, 22, 31);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/******************************************* PC-PS5-XBOX-CSS-END *******************************/
+
+/******************************************* PC-CSS-START ************************************************/
+
+.pc-background {
+  background-image: linear-gradient(to top, #170029 10%, #100d26d3 37%, #004692 49%, #600d00 60%, #000000 90%);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.pc-filter {
+  background-color: #000000ad;
+  border-radius: 30px;
+  width: 60%;
+  height: 10rem;
+}
+
+.pc-filter button {
+  background-color: #b56600;
+  border-radius: 30px;
+  border: 2px solid rgb(61, 0, 0);
+  width: 25%;
+  height: 35%;
+  text-align: center;
+  font-size: 100%;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.pc-filter button:hover {
+  background-color: rgb(255, 204, 0);
+  border: 2px solid rgb(61, 0, 0);
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.pc-filter input {
+  width: 20%;
+  height: 40%;
+  border-radius: 20px;
+  border: 2px solid rgb(61, 0, 0);
+  color: black;
+  font-size: 25px;
+  background-color: rgb(255, 204, 0);
+}
+
+.pc-content {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pc-game {
+  border: 4px solid #00ffff;
+  background-image: linear-gradient(0deg, #26000d5a 40%, #b5fffd51 100%);
+  border-radius: 30px;
+  box-shadow: #00ffff00 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  animation: BackgroundGameCard 3s infinite;
+}
+
+.pc-game img {
+  filter: saturate(1);
+  border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.pc-game img:hover {
+  animation: GameCard 3s infinite;
+}
+
+.pc-game h1 {
+  font-size: 35px;
+}
+
+.pc-game h1,
+.pc-game h2 {
+  color: white;
+}
+
+.pc-game a {
+  border: 2px solid #ffcc00;
+  background-color: rgb(91, 12, 0);
+  width: 10rem;
+  color: #ffcc00;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.pc-game a:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #008692;
+  color: #000516;
+}
+
+/******************************************* PC-CSS-END ************************************************/
+
+/******************************************* PS5-CSS-START ************************************************/
+
+.ps5-background {
+  background-image: linear-gradient(to top, #000000 10%, #3c3c3cd3 45%, #ffffff 60%, #353535 75%, #000000 90%);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.ps5-filter {
+  background-color: #4a4a4ab3;
+  border-radius: 30px;
+  width: 60%;
+  height: 10rem;
+}
+
+.ps5-filter button {
+  background-color: rgb(18, 18, 18);
+  border-radius: 30px;
+  border: 2px solid black;
+  width: 25%;
+  height: 35%;
+  text-align: center;
+  font-size: 100%;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.ps5-filter button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.ps5-filter input {
+  width: 20%;
+  height: 40%;
+  border-radius: 20px;
+  color: black;
+  font-size: 25px;
+  border: 2px solid black;
+}
+
+.ps5-content {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ps5-game {
+  border: 4px solid #00ffff;
+  background-image: linear-gradient(0deg, #0000005a 40%, #ffffffab 100%);
+  border-radius: 30px;
+  box-shadow: #00ffff00 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  animation: BackgroundGameCard 3s infinite;
+}
+
+.ps5-game img {
+  filter: saturate(1);
+  border-radius: 30px;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.ps5-game img:hover {
+  animation: GameCard 3s infinite;
+}
+
+.ps5-game h1 {
+  font-size: 35px;
+}
+
+.ps5-game h1,
+.ps5-game h2 {
+  color: white;
+}
+
+.ps5-game a {
+  border: 2px solid black;
+  background-color: white;
+  width: 10rem;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.ps5-game a:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #008692;
+  color: #000516;
+}
+
+
+/******************************************* PS5-CSS-END ************************************************/
+
+/******************************************* XBOX-CSS-START ************************************************/
+
+.xbox-background {
+  background-image: linear-gradient(to top, #000000 10%, #003907 35%, #1ac12e 60%, #1ac12e 60%, #000000 90%);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.xbox-filter {
+  background-color: #000000b3;
+  border-radius: 30px;
+  width: 60%;
+  height: 10rem;
+}
+
+.xbox-filter button {
+  background-color: rgb(18, 18, 18);
+  border: 2px solid white;
+  border-radius: 30px;
+  width: 25%;
+  height: 35%;
+  text-align: center;
+  font-size: 100%;
+  color: #1ac12e;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.xbox-filter button:hover {
+  background-color: #1ac12e;
+  border: 2px solid white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.xbox-filter input {
+  width: 20%;
+  height: 40%;
+  border-radius: 20px;
+  color: black;
+  font-size: 25px;
+  background-color: #1ac12e;
+  border: 2px solid black;
+}
+
+.xbox-content {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.xbox-game {
+  border: 4px solid #00ffff;
+  background-image: linear-gradient(0deg, #0000005a 40%, #ffffffab 100%);
+  border-radius: 30px;
+  box-shadow: #00ffff00 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  animation: BackgroundGameCard 3s infinite;
+}
+
+.xbox-game img {
+  filter: saturate(1);
+  border-radius: 30px;
+  border: 2px solid #1ac12e;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.xbox-game img:hover {
+  animation: GameCard 3s infinite;
+}
+
+.xbox-game h1 {
+  font-size: 35px;
+}
+
+.xbox-game h1,
+.xbox-game h2 {
+  color: #1ac12e;
+  text-shadow: 0px 0px 10px black;
+}
+
+.xbox-game a {
+  background-color: #1ac12e;
+  border: 2px solid black;
+  width: 10rem;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.xbox-game a:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #008692;
+  color: #000516;
+}
+
+
+/******************************************* XBOX-CSS-END ************************************************/
+
+/******************************************* DETAIL-CSS-START ************************************************/
+.brand {
+  width: 100%;
+}
+
+.brand h1 {
+  width: 60%;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  font-size: 80px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  border-radius: 15px;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  animation: Brand 2s infinite;
+}
+
+.detail-content {
+  width: 97%;
+  height: auto;
+}
+
+.left-detail {
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.right-detail {
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+iframe {
+  border-radius: 40px;
+}
+
+.standart-detail {
+  width: 100%;
+  height: 40rem;
+}
+
+.deluxe-detail {
+  width: 100%;
+  height: 40rem;
+  background-color: rgba(189, 123, 0, 0.289);
+  border-radius: 40px;
+}
+
+.ultimate-detail {
+  width: 100%;
+  height: 40rem;
+  background-color: rgba(0, 0, 0, 0.27);
+  border-radius: 40px;
+}
+
+.standart-game h2 {
+  color: white;
+}
+
+.standart-game ul li {
+  color: white;
+  font-size: 15px;
+  list-style: square;
+}
+
+.standart-game a {
+  width: 50%;
+  border: none;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.standart-game a:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #008692;
+  color: #000516;
+}
+
+.s-game,
+.d-game,
+.u-game {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  border-radius: 45px 45px 25px 25px;
+  border: 2px solid #00ffff;
+}
+
+.deluxe-game h2 {
+  color: white;
+}
+
+.deluxe-game ul li {
+  color: white;
+  font-size: 15px;
+  list-style: square;
+}
+
+.deluxe-game a {
+  width: 50%;
+  border: none;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.deluxe-game a:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #008692;
+  color: #000516;
+}
+
+.ultimate-game h2 {
+  color: white;
+}
+
+.ultimate-game ul li {
+  color: white;
+  font-size: 15px;
+  list-style: square;
+}
+
+.ultimate-game a {
+  width: 50%;
+  border: none;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.ultimate-game a:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #008692;
+  color: #000516;
+}
+
+.edition {
+  font-size: 40px;
+  color: white;
+}
+
+.about-detail {
+  width: 100%;
+  height: auto;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.about-detail p {
+  font-size: 25px;
+  color: white;
+}
+
+/******************************************* DETAIL-CSS-END ************************************************/
+
+/******************************************* PROFILE-CSS-START ************************************************/
+
+.profile-background {
+  background-image: linear-gradient(to left, #0a244f36 20%, rgba(0, 25, 38, 0.878) 97%), url(./components/main-img/profile/background.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 60rem;
+}
+
+.profile-content {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  border: 2px solid #00ffff;
+  width: 80%;
+  height: 40rem;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.profile-img-row {
+  width: 100%;
+  height: 10rem;
+}
+
+.profile-info-row {
+  width: 100%;
+}
+
+.profile-info {
+  color: #00ffff;
+}
+
+/******************************************* PROFILE-CSS-END ************************************************/
+
+/******************************************* COMPLETE-ORDER-CSS-START ************************************************/
+
+.complete-order-background {
+  background-image: linear-gradient(to top, #001231c4 20%, rgba(0, 25, 38, 0.878) 97%), url(./components/main-img/complete-order/background.jpg);
+  background-position: bottom;
+  background-size: cover;
+  width: 100%;
+  height: 100rem;
+}
+
+.complete-order-content {
+  width: 100%;
+  height: auto;
+}
+
+.order-row {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  width: 50%;
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.order-info {
+  background-color: transparent;
+  width: 100%;
+  height: 10rem;
+  color: #00ffff;
+}
+
+.pay {
+  width: 100%;
+  height: auto;
+}
+
+.pay-row {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  width: 50%;
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.discount {
+  width: 100%;
+}
+
+.discount label {
+  color: #00ffff;
+  font-size: 25px;
+}
+
+.discount input {
+  background-color: #000516;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  width: 40%;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.go-pay button {
+  background-color: #000516;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.go-pay button:hover {
+  background-color: #00ffff;
+  border: 2px solid #000516;
+  color: #000516;
+}
+
+/******************************************* COMPLETE-ORDER-CSS-END ************************************************/
+
 /******************************************* ABOUT-CSS-START ***********************************************/
 
 .about-us-background {
@@ -407,6 +1001,84 @@ form {
 
 
 /******************************************* ABOUT-CSS-END ***********************************************/
+
+/******************************************* CONTACT-CSS-START ************************************************/
+
+.contact-us-background {
+  background-image: url(./components/main-img/contact/background.jpg);
+  background-position: bottom;
+  background-size: cover;
+  width: 100%;
+  height: 75rem;
+}
+
+.contact-row {
+  width: 100%;
+  height: auto;
+}
+
+.contact-form {
+  width: 90%;
+  height: 30rem;
+  color: white;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #010712 0%, #010815e4 46%, #04112996 100%);
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.contact-form label {
+  font-size: 40px;
+  color: #00ffff;
+}
+
+.one,
+.two,
+.three {
+  width: 100%;
+}
+
+.input button {
+  background-color: #000516;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  width: 40%;
+  font-size: 20px;
+}
+
+#desc {
+  height: 10rem;
+  border-radius: 5px;
+  background-color: #000516;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+}
+
+#email,
+#phone {
+  width: 53%;
+  border-radius: 5px;
+  background-color: #000516;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+}
+
+#email::placeholder,
+#phone::placeholder {
+  color: #00ffff42;
+}
+
+.contact-map-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-map-iframe iframe {
+  filter: drop-shadow(0px 0px 60px #000000);
+}
+
+/******************************************* CONTACT-CSS-END ************************************************/
 
 /******************************************* FOOTER-CSS-START ***********************************************/
 footer {
@@ -618,3 +1290,173 @@ footer h2 {
 }
 
 /******************************************* Animation-End ****************************************************/
+
+/************************************* Media-Responsive ******************************************************/
+
+@media (max-width:750px) {
+  .pc-filter {
+      width: 90%;
+      height: 5rem;
+      background-color: #214848;
+  }
+
+  .pc-filter a {
+      width: 30%;
+      height: 50%;
+  }
+
+  .pc-filter input {
+      width: 30%;
+      height: 50%;
+  }
+
+  .ps5-filter {
+      width: 90%;
+      height: 5rem;
+      background-color: #214848;
+  }
+
+  .ps5-filter a {
+      width: 30%;
+      height: 50%;
+  }
+
+  .ps5-filter input {
+      width: 30%;
+      height: 50%;
+  }
+
+  .xbox-filter {
+      width: 90%;
+      height: 5rem;
+      background-color: #214848;
+  }
+
+  .xbox-filter a {
+      width: 30%;
+      height: 50%;
+  }
+
+  .xbox-filter input {
+      width: 30%;
+      height: 50%;
+  }
+}
+
+@media (max-width:630px){
+  .signup-name input,
+  .signup-surname input,
+  .signup-username input,
+  .signup-password input,
+  .signup-age input {
+      font-size: 7px;
+  }
+}
+
+@media (max-width:690px){
+  .contact-form label {
+      font-size: 20px;
+  }
+}
+
+@media (max-width:570px){
+  #desc {
+      height: 10rem;
+      width: 40%;
+      border-radius: 5px;
+      background-color: #000516;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+  }
+  
+  #email,
+  #phone {
+      width: 33%;
+      border-radius: 5px;
+      background-color: #000516;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+  }
+  .one,.two,.three{
+      justify-content: center;
+      padding: 1rem;
+  }
+}
+
+@media (max-width:520px){
+  .pc-filter button {
+      width: 25%;
+      height: 35%;
+      text-align: center;
+      font-size: 50%;
+  }
+  .ps5-filter button {
+      width: 25%;
+      height: 35%;
+      text-align: center;
+      font-size: 50%;
+  }
+  .xbox-filter button {
+      width: 25%;
+      height: 35%;
+      text-align: center;
+      font-size: 50%;
+  }
+}
+
+@media (max-width:555px){
+  .brand h1{
+      font-size: 60px;
+  }
+}
+
+@media (max-width:420px){
+  .brand h1{
+      font-size: 40px;
+  }
+}
+
+@media (max-width:535px){
+  .basket-content{
+      width: 20rem;
+  }
+}
+
+@media (max-width:567px){
+  .user-login-content{
+      width: 25rem;
+  }
+  .user-login-content label{
+      font-size: 13px;
+  }
+  .user-login-content input{
+      font-size: 13px;
+  }
+}
+
+@media (max-width:363px){
+  .user-login-content{
+      width: 15rem;
+  }
+  .user-login-content label{
+      font-size: 10px;
+  }
+  .user-login-content input{
+      font-size: 10px;
+  }
+  .user-login-content button{
+      font-size: 15px;
+  }
+  .user-login-content a{
+      font-size: 15px;
+  }
+}
+
+@media (max-width:768px) {
+  .pay-row{
+      width: 80%;
+  }
+  .order-row{
+      width: 80%;
+  }
+}
