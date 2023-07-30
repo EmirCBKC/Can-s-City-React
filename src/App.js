@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavbarSite from './components/NavbarSite';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -23,11 +24,14 @@ function App() {
 
   return (
     <>
-      <NavbarSite/>
-      <Home/>
-      <Footer/>
+      <NavbarSite />
+      <Routes> {/* Switch yerine Routes kullanılır */}
+        <Route path="/home" element={<Home />} />
+        {/* Diğer sayfalar için de buraya Route ekleyebilirsiniz */}
+      </Routes>
+      <Footer />
     </>
   );
-} 
+}
 
 export default App;

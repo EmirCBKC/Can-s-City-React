@@ -3,6 +3,8 @@ import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavbarSite() {
     return (
@@ -10,8 +12,10 @@ function NavbarSite() {
             <div className="nav">
 
                 <Navbar expand="lg">
-                    
-                    <Navbar.Brand href="#home" className='ms-3'>Can's City</Navbar.Brand>
+
+                    <Link to="/home" className='ms-3'>  
+                        <span className="navbar-brand">Can's City</span>
+                    </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
