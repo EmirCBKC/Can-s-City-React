@@ -24,12 +24,22 @@ function App() {
 
   return (
     <>
-      <NavbarSite />
-      <Routes> {/* Switch yerine Routes kullanılır */}
-        <Route path="/home" element={<Home />} />
-        {/* Diğer sayfalar için de buraya Route ekleyebilirsiniz */}
-      </Routes>
-      <Footer />
+      <Router>
+        <NavbarSite />
+        <Routes> {/* Switch yerine Routes kullanılır */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/pc" element={<Pc />} />
+          <Route path="/ps5" element={<Ps5 />} />
+          <Route path="/xbox" element={<Xbox />} />
+          <Route path="/complete-order" element={<CompleteOrder />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/detail" element={<Detail />} />
+          {/* Diğer sayfalar için de buraya Route ekleyebilirsiniz */}
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

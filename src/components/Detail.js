@@ -1,7 +1,7 @@
 function Detail() {
     return (
         <>
-            <div id="detail" class="detail-main">
+            <div id="detail" className="detail-main">
             </div>
         </>
     )

@@ -48,7 +48,7 @@ function Home() {
                                         Possimus laborum assumenda neque soluta quia quisquam ipsam sit, consequatur doloribus
                                         temporibus tenetur quas totam laboriosam tempore dolorum quae reprehenderit veniam autem
                                         voluptatum. Voluptatibus rem sit fugiat sequi officia velit!</p>
-                                    <a href="/pc.html"><button className="btn">Go games</button></a>
+                                    <a href="/pc"><button className="btn">Go games</button></a>
                                 </div>
                             </div>
 
@@ -67,7 +67,7 @@ function Home() {
                                     Officiis assumenda repellat adipisci atque! Alias repellendus quasi delectus totam
                                     assumenda iure architecto labore tempora placeat pariatur ducimus molestiae eveniet, a
                                     velit! Est vero ea obcaecati ipsam ad placeat soluta?</p>
-                                <a href="/ps5.html"><button className="btn">Go games</button></a>
+                                <a href="/ps5"><button className="btn">Go games</button></a>
                             </div>
                         </div>
 
@@ -100,7 +100,7 @@ function Home() {
                                         Enim, officiis amet! Error ipsa hic ullam obcaecati perferendis quae omnis recusandae
                                         harum repudiandae voluptates exercitationem cum perspiciatis, consectetur deserunt porro
                                         quas velit nulla repellat modi similique architecto assumenda esse.</p>
-                                    <a href="/xbox.html"><button className="btn">Go games</button></a>
+                                    <a href="/xbox"><button className="btn">Go games</button></a>
                                 </div>
                             </div>
 

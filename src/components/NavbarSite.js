@@ -13,26 +13,24 @@ function NavbarSite() {
 
                 <Navbar expand="lg">
 
-                    <Link to="/home" className='ms-3'>  
-                        <span className="navbar-brand">Can's City</span>
-                    </Link>
+                    <Navbar.Brand className='ms-3' href="/home">Can's City</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <NavDropdown title="Games" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">
+                                <NavDropdown.Item href="/pc">
                                     Pc
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
+                                <NavDropdown.Item href="/ps5">
                                     Playstation 5
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">
+                                <NavDropdown.Item href="/xbox">
                                     Xbox
                                 </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#home">Community</Nav.Link>
-                            <Nav.Link href="#link">About Us</Nav.Link>
-                            <Nav.Link href="#link">Contact Us</Nav.Link>
+                            <Nav.Link href="/community">Community</Nav.Link>
+                            <Nav.Link href="/about">About Us</Nav.Link>
+                            <Nav.Link href="/contact">Contact Us</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
