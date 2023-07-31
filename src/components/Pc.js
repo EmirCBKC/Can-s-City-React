@@ -9,7 +9,7 @@ const PcGameAPI = () => {
         setpcGame(GamesData);
     }, []);
 
-    let pcGames = pcGame.filter(element => element.title == "PC" && element.edition.edition_name == "STANDART")
+    let pcGames = pcGame.filter(element => element.title === "PC" && element.edition.edition_name === "STANDART")
 
     return (
         <>
@@ -17,11 +17,11 @@ const PcGameAPI = () => {
                 <div key={element.id} className="mt-5 mb-5 col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div className="pc-game d-flex flex-column align-items-center">
                         <div className="p-4 d-flex flex-column align-items-center">
-                            <img src={element.edition.img} width="100%" height="400px"></img>
+                            <img src={element.edition.img} alt="" width="100%" height="400px"></img>
                             <h1 className="text-center mt-2">{element.edition.game_name}</h1>
                             <h2 className="text-center price mt-2">{element.edition.price}$</h2>
-                            <a href="/detail.html?id=${element.id}" className="btn btn-light mt-2">Go detail</a>
-                            <button id="${element.id}" className="add-basket mt-2">Add Basket</button>
+                            <a href="/detail.html?id={element.id}" className="btn btn-light mt-2">Go detail</a>
+                            <button id={element.id} className="add-basket mt-2">Add Basket</button>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ function Pc() {
             <div className="pc-background d-flex justify-content-center flex-column align-items-center">
                 <div data-aos="fade-up">
                     <div className="header">
-                        <img src="/main-img/pc/background.jpg" width="100%" height="100%"></img>
+                        <img src="/main-img/pc/background.jpg" alt="" width="100%" height="100%"></img>
                     </div>
                 </div>
 
