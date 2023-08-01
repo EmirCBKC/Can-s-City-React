@@ -3,38 +3,35 @@ import GamesData from './GamesData';
 
 const PcGameList = () => {
 
-    const [pcGame, setpcGame] = useState([]);
-    // const [searchValue, setSearchValue] = useState('');
-    const [sortOrder, setSortOrder] = useState('');
+    const [pcGame, setPcGame] = useState([]);
+
+    useEffect(() => {
+        setPcGame(GamesData);
+    }, []);
+
+    const pcGames = pcGame.filter(element => element.title === "PC" && element.edition.edition_name === "STANDART");
 
     const handleSortAscClick = () => {
-        setSortOrder('asc'); // Küçükten büyüğe sıralama düzenini ayarla
+        setPcGame(pcGames.sort((a, b) => a.edition.price - b.edition.price));
     };
 
     const handleSortDescClick = () => {
-        setSortOrder('desc'); // Büyükten küçüğe sıralama düzenini ayarla
+        setPcGame(pcGames.sort((a, b) => b.edition.price - a.edition.price));
     };
-    
-    const pcGames = pcGame.filter(element => element.title === "PC" && element.edition.edition_name === "STANDART");
-    
-    useEffect(() => {
-        setpcGame(GamesData);
-        // Fiyata göre sırala
-        if (sortOrder === 'asc') {
-            setpcGame(pcGames.sort((a, b) => b.edition.price - a.edition.price));
-        } else {
-            setpcGame(pcGames.sort((a, b) => a.edition.price - b.edition.price));
-        }
-    }, [sortOrder]);
 
-    // let filteredGames = pcGames.filter(element => element.edition.game_name.toLowerCase().includes(searchValue.toLowerCase()));
+    const handleInputChange = () => {
+        const lowerCaseSearchValue = document.querySelector("#pc_search").value.toLowerCase();
+        const filteredResult = pcGame.filter(element => element.edition.game_name.toLowerCase().includes(lowerCaseSearchValue));
+        setPcGame(filteredResult);
+        console.log(pcGames);
+    }
 
     return (
         <>
             <div className="pc-filter d-flex justify-content-around align-items-center mt-5 mb-5">
                 <button onClick={handleSortAscClick} id="lowPc" className="btn btn-danger">Low Price$</button>
                 <button onClick={handleSortDescClick} id="highPc" className="btn btn-danger">High Price$</button>
-                <input id="pc_search" className="text-center" type="text" placeholder="search"></input>
+                <input onChange={handleInputChange} id="pc_search" className="text-center" type="text" placeholder="search"></input>
             </div>
 
             <div className="pc-content p-3">
