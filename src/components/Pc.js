@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import GamesData from './GamesData';
 
 const PcGameList = () => {
@@ -43,7 +44,7 @@ const PcGameList = () => {
                                     <img src={element.edition.img} alt="" width="100%" height="400px"></img>
                                     <h1 className="text-center mt-2">{element.edition.game_name}</h1>
                                     <h2 className="text-center price mt-2">{element.edition.price}$</h2>
-                                    <a href="/detail.html?id={element.id}" className="btn btn-light mt-2">Go detail</a>
+                                    <Link to={`/detail/${element.id}`} className="btn btn-light mt-2">Go detail</Link>
                                     <button id={element.id} className="add-basket mt-2">Add Basket</button>
                                 </div>
                             </div>

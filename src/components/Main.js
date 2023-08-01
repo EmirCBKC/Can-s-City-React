@@ -35,7 +35,7 @@ function Main() {
                     <Route path="/xbox" element={<Xbox />} />
                     <Route path="/complete-order" element={<CompleteOrder />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/detail" element={<Detail />} />
+                    <Route path="/detail/:id" element={<Detail />} />
                 </Routes>
                 <Footer />
             </Router>
