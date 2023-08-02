@@ -3,10 +3,32 @@ import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Basket from './Basket';
 
 function NavbarSite() {
+
+    const [basketBtn, setBasketBtn] = useState("none");
+    const basketClick = () => {
+        if (basketBtn === "none") {
+            setBasketBtn("block");
+            setUserBtn("none");
+        } else {
+            setBasketBtn("none");
+        }
+    }
+
+    const [userBtn, setUserBtn] = useState("none");
+    const userClick = () => {
+        if (userBtn === "none") {
+            setUserBtn("block");
+            setBasketBtn("none");
+        } else {
+            setUserBtn("none");
+        }
+    }
+
     return (
         <>
             <div className="nav">
@@ -18,9 +40,9 @@ function NavbarSite() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <NavDropdown title="Games" id="basic-nav-dropdown">
-                                    <Link className='dropdown-item' to="/pc">Pc</Link>
-                                    <Link className='dropdown-item' to="/ps5">Playstation 5</Link>
-                                    <Link className='dropdown-item' to="/xbox">Xbox</Link>
+                                <Link className='dropdown-item' to="/pc">Pc</Link>
+                                <Link className='dropdown-item' to="/ps5">Playstation 5</Link>
+                                <Link className='dropdown-item' to="/xbox">Xbox</Link>
                             </NavDropdown>
                             <Link className='nav-link' to="/community">Community</Link>
                             <Link className='nav-link' to="/about">About Us</Link>
@@ -29,18 +51,19 @@ function NavbarSite() {
                     </Navbar.Collapse>
 
                     <div className="basket me-2">
-                        <button id="basket" className="btn"><FontAwesomeIcon className='basket-icon' icon={faBasketShopping} size="2xl" style={{ color: "#00ffff" }} />
+                        <button id="basket" onClick={basketClick} className="btn"><FontAwesomeIcon className='basket-icon' icon={faBasketShopping} size="2xl" style={{ color: "#00ffff" }} />
                         </button>
-                        <div id="basket" className="basket-content">
+                        <div id="basket" className="basket-content" style={{ display: basketBtn }}>
                             <div className="order-button d-flex align-items-center justify-content-center">
+                                <Basket/>
                             </div>
                         </div>
                     </div>
 
                     <div className="user-login">
-                        <button id="user" className="btn"><FontAwesomeIcon className='user-icon' icon={faUser} size="2xl" style={{ color: "#00ffff" }} />
+                        <button id="user" onClick={userClick} className="btn"><FontAwesomeIcon className='user-icon' icon={faUser} size="2xl" style={{ color: "#00ffff" }} />
                         </button>
-                        <div className="user-content">
+                        <div className="user-content" style={{ display: userBtn }}>
                             <div className="user-login-content d-flex flex-column align-items-center justify-content-center">
                                 <div className="form">
                                     <div className="username d-flex justify-content-end align-items-center">
