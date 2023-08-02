@@ -3,7 +3,7 @@ import './Main.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import NavbarSite from './NavbarSite'
 import Footer from './Footer';
 import Home from './Home';
@@ -24,10 +24,9 @@ function Main() {
 
     return (
         <>
-            <Router>
                 <NavbarSite />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route index="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
@@ -39,7 +38,6 @@ function Main() {
                     <Route path="/detail/:id" element={<Detail />} />
                 </Routes>
                 <Footer />
-            </Router>
         </>
     );
 }
