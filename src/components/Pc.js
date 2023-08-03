@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GamesData from './GamesData';
+import Basket from './Basket';
+import BasketUserNav from './BasketUserNav';
 
 const PcGameList = () => {
 
@@ -33,11 +35,12 @@ const PcGameList = () => {
         if (!basket.some(item => item.id === productIdToAdd)) {
             setBasket([...basket, pcGames.find(element => element.id === productIdToAdd)]);
         }
-        console.log(basket);
+        // console.log(basket);
     }
 
     return (
         <>
+            <Basket data={basket}/>
             <div className="pc-filter d-flex justify-content-around align-items-center mt-5 mb-5">
                 <button onClick={handleSortAscClick} id="lowPc" className="btn btn-danger">Low Price$</button>
                 <button onClick={handleSortDescClick} id="highPc" className="btn btn-danger">High Price$</button>

@@ -1,11 +1,16 @@
 import React from 'react';
 
-function Basket() {
+function Basket({ data }) {
+    console.log(data);
+    const basketData = data ?? [];
+    if (basketData.length === 0) {
+        return <p style={{color:"#00ffff"}}>Sepet boş.</p>;
+    }
     return (
         <>
-            {/* {basket.map((element) => (
+            {data.map((element) => (
                 <>
-                    <div className="basket-game m-auto mt-3 p-2 row">
+                    <div key={element.id} className="basket-game m-auto mt-3 p-2 row">
                         <div className="basket-left col-xxl-4 col-xl-4" style={{
                             backgroundImage: `url(${element.edition.img})`,
                             backgroundPosition: "top",
@@ -23,7 +28,7 @@ function Basket() {
                     </div>
                     <div className="order-button"><a href="/complete-order.html" className="btn order btn-success mt-2">Complete Order</a></div>
                 </>
-            ))} */}
+            ))}
         </>
     )
 }
