@@ -27,6 +27,15 @@ const XboxGameList = () => {
         console.log(xboxGames);
     }
 
+    const [basket, setBasket] = useState([]);
+
+    const addBasket = (productIdToAdd) => {
+        if (!basket.some(item => item.id === productIdToAdd)) {
+            setBasket([...basket, xboxGames.filter(element => element.id === productIdToAdd)]);
+            console.log(basket);
+        }
+    }
+
     return (
         <>
             <div className="xbox-filter d-flex justify-content-around align-items-center mt-5 mb-5">
@@ -45,7 +54,7 @@ const XboxGameList = () => {
                                     <h1 className="text-center mt-2">{element.edition.game_name}</h1>
                                     <h2 className="text-center price mt-2">{element.edition.price}$</h2>
                                     <Link to={`/detail/${element.id}`} className="btn btn-light mt-2">Go detail</Link>
-                                    <button id={element.id} className="add-basket mt-2">Add Basket</button>
+                                    <button id={element.id} onClick={()=>addBasket(element.id)} className="add-basket mt-2">Add Basket</button>
                                 </div>
                             </div>
                         </div>
