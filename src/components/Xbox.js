@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GamesData from './GamesData';
+import NavbarSite from './NavbarSite';
 
 const XboxGameList = () => {
 
@@ -38,6 +39,7 @@ const XboxGameList = () => {
 
     return (
         <>
+        <NavbarSite dataXBOX={basket} array={xboxGames}/>
             <div className="xbox-filter d-flex justify-content-around align-items-center mt-5 mb-5">
                 <button onClick={handleSortAscClick} id="lowXbox" className="btn btn-danger">Low Price$</button>
                 <button onClick={handleSortDescClick} id="highXbox" className="btn btn-danger">High Price$</button>

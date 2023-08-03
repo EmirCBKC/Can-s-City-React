@@ -6,8 +6,13 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 
-function NavbarSite({data=[]}) {
-    console.log(data,"NAVBAR");
+function NavbarSite({dataPC=[],dataPS5=[],dataXBOX=[]}) {
+    console.log(dataPC,"NAVBAR-pc");
+    console.log(dataPS5,"NAVBAR-ps5");
+    console.log(dataXBOX,"NAVBAR-xbox");
+    const mixData = dataPC.concat(dataPS5, dataXBOX);
+    console.log(mixData,"Mix Data");
+
 
 
     const [basketBtn, setBasketBtn] = useState("none");
@@ -55,7 +60,7 @@ function NavbarSite({data=[]}) {
                         </button>
                         <div id="basket" className="basket-content" style={{ display: basketBtn }}>
                             <div className="order-button d-flex align-items-center justify-content-center">
-                                {data.map((element) => (
+                                {/* {mixData.map((element) => (
                                     <>
                                         <div key={element.id} className="basket-game m-auto mt-3 p-2 row">
                                             <div className="basket-left col-xxl-4 col-xl-4" style={{
@@ -75,7 +80,7 @@ function NavbarSite({data=[]}) {
                                         </div>
                                         <div className="order-button"><a href="/complete-order.html" className="btn order btn-success mt-2">Complete Order</a></div>
                                     </>
-                                ))}
+                                ))} */}
                             </div>
                         </div>
                     </div>
