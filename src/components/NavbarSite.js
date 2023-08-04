@@ -1,22 +1,18 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 
-function NavbarSite({dataPC=[],dataPS5=[],dataXBOX=[]}) {
-    console.log(dataPC,"NAVBAR-pc");
-    console.log(dataPS5,"NAVBAR-ps5");
-    console.log(dataXBOX,"NAVBAR-xbox");
-    const mixData = dataPC.concat(dataPS5, dataXBOX);
-    console.log(mixData,"Mix Data");
-
-
+function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
+    const mixData = [...dataPC, ...dataPS5, ...dataXBOX];
+    console.log(mixData);
 
     const [basketBtn, setBasketBtn] = useState("none");
     const basketClick = () => {
+        
         if (basketBtn === "none") {
             setBasketBtn("block");
             setUserBtn("none");
@@ -60,27 +56,33 @@ function NavbarSite({dataPC=[],dataPS5=[],dataXBOX=[]}) {
                         </button>
                         <div id="basket" className="basket-content" style={{ display: basketBtn }}>
                             <div className="order-button d-flex align-items-center justify-content-center">
-                                {/* {mixData.map((element) => (
+                                {mixData.map((innerArray, index) => (
                                     <>
-                                        <div key={element.id} className="basket-game m-auto mt-3 p-2 row">
-                                            <div className="basket-left col-xxl-4 col-xl-4" style={{
-                                                backgroundImage: `url(${element.edition.img})`,
-                                                backgroundPosition: "top",
-                                                backgroundSize: "cover",
-                                                borderRadius: "15px",
-                                                border: "2px solid black"
-                                            }}>
-                                            </div>
-                                            <div className="basket-right d-flex flex-column justify-content-center align-items-center col-8">
-                                                <h3>{element.edition.game_name}</h3>
-                                                <h4>{element.edition.edition_name}</h4>
-                                                <h4>{element.edition.price}$</h4>
-                                                <button className="btn btn-danger remove-button">Remove Basket</button>
-                                            </div>
+                                        <div key={index}>
+                                            <>
+                                                {innerArray.map((element) => (
+                                                    <div key={element.id} className="basket-game m-auto mt-3 p-2 row">
+                                                        <div className="basket-left col-xxl-4 col-xl-4" style={{
+                                                            backgroundImage: `url(${element.edition.img})`,
+                                                            backgroundPosition: "top",
+                                                            backgroundSize: "cover",
+                                                            borderRadius: "15px",
+                                                            border: "2px solid black"
+                                                        }}>
+                                                        </div>
+                                                        <div className="basket-right d-flex flex-column justify-content-center align-items-center col-8">
+                                                            <h3>{element.edition.game_name}</h3>
+                                                            <h4>{element.edition.edition_name}</h4>
+                                                            <h4>{element.edition.price}$</h4>
+                                                            <button className="btn btn-danger remove-button">Remove Basket</button>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                                <div key={index} className="order-button"><a href="/complete-order.html" className="btn order btn-success mt-2">Complete Order</a></div>
+                                            </>
                                         </div>
-                                        <div className="order-button"><a href="/complete-order.html" className="btn order btn-success mt-2">Complete Order</a></div>
                                     </>
-                                ))} */}
+                                ))}
                             </div>
                         </div>
                     </div>

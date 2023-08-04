@@ -29,7 +29,6 @@ const PcGameList = () => {
     }
 
     const [basket, setBasket] = useState([]);
-    console.log(basket,"PC");
     const addBasket = (productIdToAdd) => {
         if (!basket.some(item => item.id === productIdToAdd)) {
             setBasket([...basket, pcGames.filter(element => element.id === productIdToAdd)]);
