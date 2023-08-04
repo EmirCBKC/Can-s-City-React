@@ -2,9 +2,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
+import UserData from './UserData';
+
 
 function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
     // getBasket ve getBasketItems tanımlanması
@@ -44,6 +46,11 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
         }
     }, [mixData, basketBtn]);
 
+    const [user, setUser] = useState([]);
+
+    useEffect(() => {
+        setUser(UserData);
+    }, []);
 
     const [userBtn, setUserBtn] = useState("none");
     const userClick = () => {
@@ -54,6 +61,27 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
             setUserBtn("none");
         }
     }
+
+    const navigate = useNavigate();
+    const loginUser = () => {
+        const userNameInput = document.querySelector("#username").value;
+        const passWordInput = document.querySelector("#password").value;
+
+        // Kullanıcının giriş bilgilerini kontrol et
+        const userFound = user.some((userData) => {
+            return userData.username === userNameInput && userData.password === passWordInput;
+        });
+
+        if (userFound) {
+            let loginUser = user.find(element => element.username === userNameInput);
+            localStorage.setItem("User Data", JSON.stringify(loginUser));
+            navigate('/profile');
+            setUserBtn("none");
+        } else {
+            // Giriş başarısızsa alert göster
+            alert("Kullanıcı adı veya şifre yanlış");
+        }
+    };
 
     const [basket, setBasket] = useState(mixData);
     const removeBasket = (productIdToAdd) => {
@@ -130,7 +158,7 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
                                         <input id="remember" type="checkbox"></input>
                                     </div>
                                     <div className="form-buttons d-flex justify-content-end">
-                                        <button id="login" className="mt-2 me-4">Login</button>
+                                        <button id="login" onClick={loginUser} className="mt-2 me-4">Login</button>
                                         <a href="/signup.html" className="mt-2 d-flex justify-content-center align-items-center">Sign Up</a>
                                     </div>
                                 </div>
