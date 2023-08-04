@@ -91,6 +91,14 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
         localStorage.setItem("Basket Local", savedBasket);
     }
 
+    const signUpClick=()=>{
+        navigate('/signup');
+    }
+
+    const completeOrderClick=()=>{
+        navigate('/complete-order');
+    }
+
     return (
         <>
             <div className="nav">
@@ -133,7 +141,7 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
                                             <button onClick={() => removeBasket(element.id)} className="btn btn-danger remove-button">Remove Basket</button>
                                         </div>
                                     </div>
-                                    <div className="order-button"><a href="/complete-order.html" className="btn order btn-success mt-2 mb-3">Complete Order</a></div>
+                                    <div className="order-button"><Link onClick={completeOrderClick} to="/complete-order" className="btn order btn-success mt-2 mb-3">Complete Order</Link></div>
                                 </React.Fragment>
                             ))}
                         </div>
@@ -159,7 +167,7 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
                                     </div>
                                     <div className="form-buttons d-flex justify-content-end">
                                         <button id="login" onClick={loginUser} className="mt-2 me-4">Login</button>
-                                        <a href="/signup.html" className="mt-2 d-flex justify-content-center align-items-center">Sign Up</a>
+                                        <Link to="/signup" onClick={signUpClick} className="mt-2 d-flex justify-content-center align-items-center">Sign Up</Link>
                                     </div>
                                 </div>
                                 <div className="login" style={{ display: "none" }}>

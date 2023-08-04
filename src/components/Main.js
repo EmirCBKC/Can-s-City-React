@@ -15,6 +15,7 @@ import Xbox from './Xbox';
 import CompleteOrder from './CompleteOrder';
 import Profile from './Profile';
 import Detail from './Detail';
+import SignUp from './SignUp';
 
 function Main() {
 
@@ -35,6 +36,7 @@ function Main() {
                     <Route path="/xbox" element={<Xbox />} />
                     <Route path="/complete-order" element={<CompleteOrder />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/signup" element={<SignUp />} />
                     <Route path="/detail/:id" element={<Detail />} />
                 </Routes>
                 <Footer />
