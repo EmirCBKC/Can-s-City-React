@@ -33,7 +33,6 @@ const XboxGameList = () => {
     const addBasket = (productIdToAdd) => {
         if (!basket.some(item => item.id === productIdToAdd)) {
             setBasket([...basket, xboxGames.filter(element => element.id === productIdToAdd)]);
-            console.log(basket);
         }
     }
 

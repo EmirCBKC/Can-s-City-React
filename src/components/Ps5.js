@@ -33,7 +33,6 @@ const Ps5GameList = () => {
     const addBasket = (productIdToAdd) => {
         if (!basket.some(item => item.id === productIdToAdd)) {
             setBasket([...basket, ps5Games.filter(element => element.id === productIdToAdd)]);
-            console.log(basket);
         }
     }
 

@@ -1,18 +1,34 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 
 function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
-    const mixData = [...dataPC, ...dataPS5, ...dataXBOX];
-    console.log(mixData);
+    // getBasket ve getBasketItems tanımlanması
+    const getBasket = localStorage.getItem("Basket Local");
+    const getBasketItems = JSON.parse(getBasket);
+
+    // mixData tanımlanması
+    const mixData = [...dataPC, ...dataPS5, ...dataXBOX].flat();
+
+    // Eğer getBasketItems varsa ve mixData boş değilse, mixData'ya getBasketItems'ı ekliyoruz
+    if (getBasketItems && mixData.length === 0) {
+        mixData.push(...getBasketItems);
+    }
+
+    // Sepeti localStorage'a kaydediyoruz
+    const savedBasket = JSON.stringify(mixData);
+    localStorage.setItem("Basket Local", savedBasket);
+
+
 
     const [basketBtn, setBasketBtn] = useState("none");
+
     const basketClick = () => {
-        
+
         if (basketBtn === "none") {
             setBasketBtn("block");
             setUserBtn("none");
@@ -20,6 +36,14 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
             setBasketBtn("none");
         }
     }
+
+    useEffect(() => {
+        // mixData değiştiğinde basketBtn durumunu güncelle
+        if (mixData.length > 0 && basketBtn === "block") {
+            setBasketBtn("block");
+        }
+    }, [mixData, basketBtn]);
+
 
     const [userBtn, setUserBtn] = useState("none");
     const userClick = () => {
@@ -29,6 +53,14 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
         } else {
             setUserBtn("none");
         }
+    }
+
+    const [basket, setBasket] = useState(mixData);
+    const removeBasket = (productIdToAdd) => {
+        let getGame = mixData.find(element => element.id === productIdToAdd)
+        setBasket(mixData.splice(mixData.indexOf(getGame), 1));
+        const savedBasket = JSON.stringify(mixData);
+        localStorage.setItem("Basket Local", savedBasket);
     }
 
     return (
@@ -55,35 +87,27 @@ function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [] }) {
                         <button id="basket" onClick={basketClick} className="btn"><FontAwesomeIcon className='basket-icon' icon={faBasketShopping} size="2xl" style={{ color: "#00ffff" }} />
                         </button>
                         <div id="basket" className="basket-content" style={{ display: basketBtn }}>
-                            <div className="order-button d-flex align-items-center justify-content-center">
-                                {mixData.map((innerArray, index) => (
-                                    <>
-                                        <div key={index}>
-                                            <>
-                                                {innerArray.map((element) => (
-                                                    <div key={element.id} className="basket-game m-auto mt-3 p-2 row">
-                                                        <div className="basket-left col-xxl-4 col-xl-4" style={{
-                                                            backgroundImage: `url(${element.edition.img})`,
-                                                            backgroundPosition: "top",
-                                                            backgroundSize: "cover",
-                                                            borderRadius: "15px",
-                                                            border: "2px solid black"
-                                                        }}>
-                                                        </div>
-                                                        <div className="basket-right d-flex flex-column justify-content-center align-items-center col-8">
-                                                            <h3>{element.edition.game_name}</h3>
-                                                            <h4>{element.edition.edition_name}</h4>
-                                                            <h4>{element.edition.price}$</h4>
-                                                            <button className="btn btn-danger remove-button">Remove Basket</button>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                                <div key={index} className="order-button"><a href="/complete-order.html" className="btn order btn-success mt-2">Complete Order</a></div>
-                                            </>
+                            {mixData.map((element, index) => (
+                                <React.Fragment key={index}>
+                                    <div className="basket-game m-auto mt-5 p-2 row">
+                                        <div className="basket-left col-xxl-4 col-xl-4" style={{
+                                            backgroundImage: `url(${element.edition.img})`,
+                                            backgroundPosition: "top",
+                                            backgroundSize: "cover",
+                                            borderRadius: "15px",
+                                            border: "2px solid black"
+                                        }}>
                                         </div>
-                                    </>
-                                ))}
-                            </div>
+                                        <div className="basket-right d-flex flex-column justify-content-center align-items-center col-8">
+                                            <h3>{element.edition.game_name}</h3>
+                                            <h4>{element.edition.edition_name}</h4>
+                                            <h4>{element.edition.price}$</h4>
+                                            <button onClick={() => removeBasket(element.id)} className="btn btn-danger remove-button">Remove Basket</button>
+                                        </div>
+                                    </div>
+                                    <div className="order-button"><a href="/complete-order.html" className="btn order btn-success mt-2 mb-3">Complete Order</a></div>
+                                </React.Fragment>
+                            ))}
                         </div>
                     </div>
 

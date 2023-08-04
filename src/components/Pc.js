@@ -25,7 +25,7 @@ const PcGameList = () => {
         const lowerCaseSearchValue = document.querySelector("#pc_search").value.toLowerCase();
         const filteredResult = pcGame.filter(element => element.edition.game_name.toLowerCase().includes(lowerCaseSearchValue));
         setPcGame(filteredResult);
-        console.log(pcGames);   
+        console.log(pcGames);
     }
 
     const [basket, setBasket] = useState([]);
@@ -37,7 +37,7 @@ const PcGameList = () => {
 
     return (
         <>
-        <NavbarSite dataPC={basket} array={pcGames}/>
+            <NavbarSite dataPC={basket} array={pcGames} />
             <div className="pc-filter d-flex justify-content-around align-items-center mt-5 mb-5">
                 <button onClick={handleSortAscClick} id="lowPc" className="btn btn-danger">Low Price$</button>
                 <button onClick={handleSortDescClick} id="highPc" className="btn btn-danger">High Price$</button>
