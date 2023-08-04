@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import GamesData from './GamesData';
+import NavbarSite from './NavbarSite';
 
 function Detail() {
     const { id } = useParams();
@@ -8,8 +9,18 @@ function Detail() {
     const elementDeluxe = GamesData.find((item) => item.edition.edition_name === "DELUXE" && item.edition.game_name === element.edition.game_name);
     const elementUltimate = GamesData.find((item) => item.edition.edition_name === "COLLECTOR" && item.edition.game_name === element.edition.game_name);
 
+    const mix=[element,elementDeluxe,elementUltimate].flat();
+
+    const [basket, setBasket] = useState([]);
+    const addBasket = (productIdToAdd, edition) => {
+        if (!basket.some(item => item.id === productIdToAdd)) {
+            setBasket([...basket, mix.filter(element => element.id === productIdToAdd && element.edition.edition_name === edition)]);
+        }
+    }
+
     return (
         <>
+            <NavbarSite dataDetail={basket} array={mix}/>
             <div className="detail-background d-flex justify-content-center flex-column align-items-center"
                 style={{
                     background: `linear-gradient(to top,rgba(0, 0, 0, 0.62) 25%,rgba(0, 0, 0, 0.277) 90%),url(${element.background_image})`,
@@ -90,7 +101,7 @@ function Detail() {
                                                 minima porro tempore.</li>
                                         </ul>
                                         <h2 className="text-center price mt-2">{element.edition.price}$</h2>
-                                        <button id={element.id} className="add-basket mt-2" value={element.edition.game_name}>Add Basket</button>
+                                        <button id={element.id} onClick={() => addBasket(element.id,element.edition.edition_name)} className="add-basket mt-2" value={element.edition.game_name}>Add Basket</button>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +129,7 @@ function Detail() {
                                                 minima porro tempore.</li>
                                         </ul>
                                         <h2 className="text-center price mt-2">{elementDeluxe.edition.price}$</h2>
-                                        <button id={elementDeluxe.id} className="add-basket mt-2" value={elementDeluxe.edition.game_name}>Add Basket</button>
+                                        <button id={elementDeluxe.id} onClick={() => addBasket(elementDeluxe.id,elementDeluxe.edition.edition_name)} className="add-basket mt-2" value={elementDeluxe.edition.game_name}>Add Basket</button>
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +157,7 @@ function Detail() {
                                                 minima porro tempore.</li>
                                         </ul>
                                         <h2 className="text-center price mt-2">{elementUltimate.edition.price}$</h2>
-                                        <button id={elementUltimate.id} className="add-basket mt-2" value={elementUltimate.edition.game_name}>Add Basket</button>
+                                        <button id={elementUltimate.id} onClick={() => addBasket(elementUltimate.id,elementUltimate.edition.edition_name)} className="add-basket mt-2" value={elementUltimate.edition.game_name}>Add Basket</button>
                                     </div>
                                 </div>
                             </div>
