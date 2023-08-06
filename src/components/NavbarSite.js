@@ -9,14 +9,10 @@ import UserData from './UserData';
 
 
 function NavbarSite({ dataPC = [], dataPS5 = [], dataXBOX = [], dataDetail = [] }) {
-    // getBasket ve getBasketItems tanımlanması
     const getBasket = localStorage.getItem("Basket Local");
     const getBasketItems = JSON.parse(getBasket);
 
-    // mixData tanımlanması
     const mixData = [...dataPC, ...dataPS5, ...dataXBOX, ...dataDetail].flat();
-    console.log(mixData);
-    // Eğer getBasketItems varsa ve mixData boş değilse, mixData'ya getBasketItems'ı ekliyoruz
     if (getBasketItems && mixData.length === 0) {
         mixData.push(...getBasketItems);
     }
